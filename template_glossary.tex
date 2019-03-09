@@ -1,0 +1,34 @@
+%%==============================================================================
+%% Glossary
+%%==============================================================================
+\selectlanguage{ngerman}
+
+\newglossaryentry{gls_example}{ %
+  name={<name>},  %% The name of the entry (as it will appear in the glossary)
+  description={ %
+    <description> %
+    \nopostdesc %% to suppress the description terminator for this entry
+  },
+  descriptionplural={<descriptionplural>},  %%
+% parent={}, %% label of parent entry, must be defined before its sub-entries
+  text={<text>}, %%If this field is omitted, the value of the name key is used
+  first={<first>}, %% first use with \gls
+  plural={<plural>},
+  firstplural={<firstplural>},
+  symbol={},
+  symbolplural={},
+% sort={}, %%
+% type={},
+% nonumberlist=true, %% (true|false)
+% see=[see also]{<label>}, %% Cross-reference another entry
+% long={},            %% acronym only
+% longplural={<longplural>},    %% acronym only
+% short={},           %% acronym only
+% shortplural={<shortplural>},  %% acronym only
+% prefix={<prefix>},              %% package: glossaries-prefix
+% prefixplural={<prefixplural>},        %% package: glossaries-prefix
+% prefixfirst={<prefixfirst>},        %% package: glossaries-prefix
+% prefixfirstplural={<prefixfirstplural>},  %% package: glossaries-prefix
+}
+
+\ifoptionfinal{\glsmoveentry{gls_example}{common}}{}

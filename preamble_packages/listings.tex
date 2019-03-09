@@ -1,0 +1,34 @@
+%%==============================================================================
+%% Typeset source code listings using LaTeX
+%%==============================================================================
+\usepackage[
+% final,
+]{listings}     %% Typeset source code listings using LaTeX
+
+% Use with ...
+%   \begin{lstlisting}[style=example, caption={Descriptive Caption Text},
+%             label=DescriptiveLabel]
+%   \end{lstlisting}
+% OR
+%   \lstinputlisting[style=example, caption={Descriptive Caption Text},
+%           label=DescriptiveLabel]{hello.c}
+%
+%\lstloadlanguages{[<dialect>]<languages>}
+%\lstdefinestyle{example}{%% \lstset{style=example}
+%  basicstyle=\footnotesize,
+%  captionpos=b,
+%  breaklines=true,
+%  showstringspaces=false,
+%  tabsize=2, frame=lines,
+%  numbers=left,
+%  numberstyle=\tiny,
+%  xleftmargin=2em,
+%  framexleftmargin=2em
+%}
+
+\lstloadlanguages{sh, Perl, Ruby, C, [11]C++, Java} 
+
+\lstset{%
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+}

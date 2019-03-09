@@ -1,0 +1,37 @@
+%%==============================================================================
+%% Demarcation
+%%==============================================================================
+
+\makeatletter
+\@ifclassloaded{scrreprt}{%
+\newcommand\frontmatter{%
+    \cleardoublepage
+  %\@mainmatterfalse
+  \pagenumbering{Roman}
+  \renewcommand{\thechapter}{\Roman{chapter}}
+  \renewcommand{\thesection}{\thechapter .\Roman{section}}
+  \renewcommand{\thesubsection}{\thesection.\Roman{subsection}}}
+
+\newcommand\mainmatter{%
+    \cleardoublepage
+ % \@mainmattertrue
+  \pagenumbering{arabic}
+  \renewcommand{\thechapter}{\arabic{chapter}}
+  \renewcommand{\thesection}{\thechapter .\arabic{section}}
+  \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+  }
+
+\newcommand\backmatter{%
+    \cleardoublepage
+ % \@mainmatterfalse
+   }
+}{}
+\makeatother
+
+\makeatletter
+\@ifclassloaded{scrartcl}{%
+  \newcommand\frontmatter{}
+  \newcommand\mainmatter{}
+  \newcommand\backmatter{}
+}{}
+\makeatother

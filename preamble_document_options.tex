@@ -1,0 +1,45 @@
+\KOMAoptions{%
+  abstract=true,%%          abstract headline (only scrartcl|scrreprt)
+%  chapterprefix=true,%%     Default: false
+%  appendixprefix=true,%%    Default: false
+}
+
+\KOMAoption{toc}{%
+  bibliography,%%               bibliography entry at TOC
+%  bibliographynumbered,%%       numbered bibliography entry at TOC
+%  nobibliography,
+%  chapterentrywithdots,
+%  chapterentrywithoutdots,
+%  flat,%%                       TOC set in table form
+%  graduated,%%                  TOC set in herarchical form
+%  index,%%                      index entry at TOC
+%  noindex,
+%  listof,%%                     lists of floating environments
+%  listofnumbered,%%             lists of floating environments, numbered
+%  nolistof,
+%  numberline,%%                 buendig mit nummeriertem Eintrag
+%  nonumberline,%%               buendig mit Nummer
+%  sectionentrywithdots,%%       class scrartcl only
+%  sectionentrywithoutdots,%%    class scrartcl only
+}
+
+\usepackage[
+  draft=false,
+%  footbotline,%%        horizontal line below footer
+%  footsepline,%%        horizontal line above footer
+%  headsepline,%%        horizontal line below header
+%  headtopline,%%        horizontal line above header
+%  pagefoot,%%           contents of page footer
+%  pagehead,%%           contents of page header
+%  pageheadfoot,%%       contents of page header or footer
+%  pagenumber,%%         pagination set with \pagemark
+  automark,%%
+%  autooneside,%%        fuer einseitigen Druck
+%  plainfootbotline,%%
+%  plainfootsepline,%%   Linie oberhalb Fusszeile auf Kapitelanfangsseiten
+%  plainheadsepline,%%   Linie unterhalb Kopfzeile auf Kapitelanfangsseiten
+%  plainheadtopline,%%
+]{scrlayer-scrpage}
+
+\widowpenalty=300
+\clubpenalty=300

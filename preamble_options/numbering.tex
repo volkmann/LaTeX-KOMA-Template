@@ -1,0 +1,12 @@
+%%==============================================================================
+%% Numbering
+%%==============================================================================
+
+%% add section to figure number
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+
+%% reset figure number every section
+\numberwithin{figure}{section}
+
+%% shows #chapter.#section.#subsection
+%\renewcommand{\thesection}{\thechapter .\arabic{section}}

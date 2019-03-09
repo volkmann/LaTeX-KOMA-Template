@@ -1,0 +1,26 @@
+%%==============================================================================
+%% Acronyms
+%%==============================================================================
+\selectlanguage{ngerman}
+
+\newacronym[ %
+    description={<description>},
+    longplural={<longplural>},
+    shortplural={<shortplural>},
+    first={<first> (\acrlong*{acronym_example}, \acrshort*{acronym_example})},
+    firstplural={<first> (\acrlong*{acronym_example}, \acrshort*{acronym_example})},
+  ]{acronym_example}{<short>}{<long>}
+
+%% Use:
+%%  \ac{<acronym>}    first use, full name is printed
+%%  \acf{<acronym>}   full name of acronym is printed
+%%  \acs{<acronym>}   short name of acronym is printed
+%%  \acl{<acronym>}   expanded acronym without mentioning the acronym
+%%  \acp{<acronym>}   same as \ac, but plural
+%%  \acfp{<acronym>}  same as \acf, but plural
+%%  \acsp{<acronym>}  same as \acs, but plural
+%%  \aclp{<acronym>}  same as \acl, but plural
+%%  \iac{<acronym>}   prefixes \ac with an appropriate indefinite article
+%%  \Iac{<acronym>}
+%%  \...*{<acronym>}  will not be marked as used
+%%------------------------------------------------------------------------------

@@ -1,0 +1,15 @@
+%%==============================================================================
+%% Appendices
+%%==============================================================================
+\usepackage[
+  toc,%       puts a header into ToC
+%  title,%     adds 'Appendix' prefix to titles
+%  titletoc,%  adds 'Appendix' prefix to titles in ToC
+%  header,%    adds 'Appendis' prefix to pageheaders
+%  page,%      puts a title into document
+]{appendix}%% Extra control of appendices
+
+\renewcommand{\appendixpagename}{\appendixname}
+\renewcommand{\appendixtocname}{\appendixname}
+
+\addto\captionsngerman{\let\appendixtocname\appendixname\let\appendixpagename\appendixname}

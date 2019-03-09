@@ -1,0 +1,89 @@
+%%==============================================================================
+%% Glossaries
+%%==============================================================================
+%%    1. Add the xindy option to the glossaries package option list.
+%%    2. Add \makeglossaries to your preamble
+%%    3. Put \printglossary[⟨options⟩] where you want your glossary to appear
+%%    4. Run LATEX on your document.
+%%    5. Run xindy
+%%        xindy -L german -C din5007-utf8 -I xindy -M myDoc\
+%%        -t myDoc.glg -o myDoc.gls myDoc.glo
+%%    6. Run LATEX on your document again.
+%%
+%% Defining New Glossaries:
+%%  \newglossary[⟨log-ext⟩]{⟨label⟩}{⟨in-ext⟩}{⟨out-ext⟩}{⟨title⟩} [⟨counter⟩]
+%%    ⟨label⟩
+%%    ⟨in-ext⟩ and ⟨out-ext⟩ specify extensions to input and output files
+%%    ⟨title⟩ is the default title
+%%    ⟨counter⟩ specifies which counter to use for associated number lists
+%%    ⟨log-ext⟩ specifies extension for makeindex or xindy transcript file
+%%    examples: \newglossary[slg]{symbols}{sls}{slo}{\glssymbolsgroupname} %
+%%          \newglossary[nlg]{numbers}{nls}{nlo}{\glsnumbersgroupname} %
+%%          \newglossary[ilg]{index}{ind}{idx}{\indexname} %
+%%
+%% Defining Glossary Entries:
+%%    \newglossaryentry{⟨label⟩}{⟨key=value list⟩}
+%%    \longnewglossaryentry{⟨label⟩}{⟨key=value list⟩}{⟨long description⟩}
+%%      \newacronym[⟨key-val list⟩]{⟨label⟩}{⟨abbrv⟩}{⟨long⟩}
+%%
+%% Setting Options After the Package is Loaded:
+%%    \setupglossaries{⟨key-val list⟩}
+%%
+%% Displaying a glossary:
+%%    \printglossaries
+%%    \printglossary[⟨options⟩]
+%%    \printglossary[type=\acronymtype]
+%%==============================================================================
+
+\usepackage[
+%%---- General Options: --------------------------------------------------------
+%  nowarn,%% supresses all warnings
+%  noredefwarn,%% supresses redefining warnings
+%  sanitizesort=false,%% sanitize sort value (default:true)
+%  nohypertypes={},%% suppress entry hyperlinks for particular glossary
+%  hyperfirst=false,%% hyperlink on first use (default:true)
+  savenumberlist=true,%% store number list for each entry (default=false)
+%%---- Sectioning, Headings and TOC Options: -----------------------------------
+  toc,%% Add glossaries to TOC
+%  numberline,%% align TOC entry with numbered section titles
+%  section=section,%% make glossaries appear in the named sectional unit
+%  ucmark=true,%% set \glsglossarymark uses \MakeTextUppercase
+%  numberedsection=autolable,%% [false|nolable|autolabel]
+%%---- Glossary Appearance Options: --------------------------------------------
+%  entrycounter=true,%% level 0 glossary entries will be numbered
+%  counterwithin={x},%% counter will be reset when x is incremented
+%  subentrycounter=true,%% level 1 glossary entry will be numbered
+%  style=list,%% glossary style to use (default:list)
+%  nolong,%% prevents automatically loading glossary-long
+%  nosuper,%% prevents automatically loading glossary-super
+%  nolist,%% prevents automatically loading glossary-list
+%  notree,%% prevents automatically loading glossary-tree
+%  nostyles,%% prevents all predefined styles from being loaded
+%  nonumberlist,%% suppress associated numberlists
+%  seeautonumberlist,%% will also suppress any cross-referencing
+%  counter=page,%% default counter to use in the number lists
+  nopostdot=true,%% suppresses default post description dot
+%  nogroupskip=true,%% suppresses default vertical gap between groups
+%%---- Sorting Options: %-------------------------------------------------------
+%  sort=standard,%% [standard|def|use]
+%  order=letter,%% [word|letter] (default:word)
+  xindy={%
+    language=german,
+    codepage=utf8,
+    },
+%  xindygloss,%% equivalent to xindy={}
+%  xindynoglsnumbers,%% equivalent to xindy={glsnumbers=false}
+%%---- Acronym Options: --------------------------------------------------------
+  acronym,%% \newglossary[alg]{acronym}{acr}{acn}{\acronymname}
+  shortcuts,%% provides shortcut commands for acronyms
+%%---- Other Options: ----------------------------------------------------------
+%  symbols,%% \newglossary[slg]{symbols}{sls}{slo}{\glssymbolsgroupname}
+%  numbers,%% \newglossary[nlg]{numbers}{nls}{nlo}{\glsnumbersgroupname}
+%  index,%% \newglossary[ilg]{index}{ind}{idx}{\indexname}
+]{glossaries}   %% Create glossaries and lists of acronyms
+
+%\usepackage{glossaries-prefix}
+
+\newignoredglossary{common}
+
+\makeglossaries

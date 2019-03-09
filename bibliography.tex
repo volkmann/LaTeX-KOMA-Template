@@ -1,0 +1,25 @@
+% !TeX spellcheck = de_DE
+% !TeX encoding = UTF-8
+\selectlanguage{ngerman}
+
+\printbibheading[
+  heading=bibliography,
+  heading=bibintoc,
+  title={Literaturverzeichnis},
+]
+
+\begin{refcontext}[labelprefix=@]
+  \printbibliography[
+    type=online,
+    title={Online"=Publikationen},
+    heading=subbibliography,
+%   heading=subbibintoc,
+  ]
+\end{refcontext}
+
+\printbibliography[
+  nottype={online},
+  title={Offline"=Publikationen},
+  heading=subbibliography,
+% heading=subbibintoc,
+]

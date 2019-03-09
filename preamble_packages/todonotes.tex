@@ -1,0 +1,33 @@
+%%==============================================================================
+%% todonotes
+%% Use:
+%%   \listoftodos \todototoc%% put this in the main file
+%%
+%% \todo[%
+%%    color=orange!50,
+%%    noline, %% line
+%%    inline,
+%%    size=\small,
+%%    nolist, %% list
+%%    caption={Short note},
+%%    prepend, %% noprepend
+%%    fancyline,
+%%    author={Max M.},
+%%  ]{text}
+%%==============================================================================
+\usepackage[ %
+%  disable,
+%  obeyDraft,
+  obeyFinal,
+  ngerman, %% translations of 'List of todos' etc.
+  colorinlistoftodos,
+%  bordercolor=black,
+%  backgroundcolor=orange,
+%  linecolor=orange,
+  textsize=scriptsize,
+%  textwidth=1.5cm,
+%  prependcaption,
+]{todonotes}%% Marking things to do in a LaTeX document
+
+%\setlength{\marginparwidth}{1.5cm}
+\reversemarginpar
