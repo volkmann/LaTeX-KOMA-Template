@@ -4,16 +4,16 @@
 %%==============================================================================
 %% Document metadata:
 %%==============================================================================
-\input{tex/static/template_metadata}
+\input{tex/static/templates/metadata}
 %%==============================================================================
 \input{tex/static/preamble_options}
-\input{tex/static/template_resources}
+\input{tex/static/templates/resources}
 
 \begin {document} %hier beginnt das eigentliche Dokument
 %%==============================================================================
 %% Document content:
 %%==============================================================================
-\input{tex/static/template_frontmatter}%%--------------------------------------
+\input{tex/static/templates/frontmatter}%%--------------------------------------
 
 \Blinddocument
 %\subimport{sec_Foo/}{Foo} %% example \section
@@ -25,5 +25,5 @@
 
 \ifdraft{\nocite{*} \glsaddallunused }{} % shows full bib and gls in draft mode
 
-\input{tex/static/template_backmatter} %%--------------------------------------
+\input{tex/static/templates/backmatter} %%--------------------------------------
 \end{document} %hier endet das eigentliche Dokument
