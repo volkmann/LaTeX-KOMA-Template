@@ -7,13 +7,13 @@
 \input{tex/metadata}
 %%==============================================================================
 \input{tex/static/preamble_options}
-\input{tex/static/templates/resources}
+\input{tex/static/templates/tex/resources}
 
 \begin {document} %hier beginnt das eigentliche Dokument
 %%==============================================================================
 %% Document content:
 %%==============================================================================
-\input{tex/static/templates/frontmatter}%%--------------------------------------
+\input{tex/static/templates/tex/frontmatter}%%--------------------------------------
 
 \Blinddocument
 %\subimport{sec_Foo/}{Foo} %% example \section
@@ -22,5 +22,5 @@
 
 \ifdraft{\nocite{*} \glsaddallunused }{} % shows full bib and gls in draft mode
 
-\input{tex/static/templates/backmatter} %%--------------------------------------
+\input{tex/static/templates/tex/backmatter} %%--------------------------------------
 \end{document} %hier endet das eigentliche Dokument
