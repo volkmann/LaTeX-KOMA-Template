@@ -21,14 +21,7 @@
 %\automark[subsection]{section}%%   others default
 
 \makeatletter
-\@ifclassloaded{scrartcl}{%
-  \ihead []{\headmark}%% inside headings
-  \chead []{}%% centered headings
-  \ohead []{}%% outside headings
-  \ifoot []{}%%inside foot
-  \cfoot []{}%% centered foot
-  \ofoot [\pagemark]{\pagemark}%% outside foot
-}{}
+%\@ifclassloaded{scrartcl}{}{}
 \@ifclassloaded{scrreprt}{%
   \ihead []{\headmark}%% inside headings
   \chead []{}%% centered headings
@@ -37,6 +30,7 @@
   \cfoot []{}%% centered foot
   \ofoot [\pagemark]{\pagemark}%% outside foot
 }{}
+%\@ifclassloaded{scrbook}{}{}
 \makeatother
 
 %\setkomafont{pageheadfoot}{\small}%% example
