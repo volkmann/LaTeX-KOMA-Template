@@ -1,6 +1,23 @@
 %%==============================================================================
 %% Document metadata:
 %%==============================================================================
+\newcommand{\mysubject}{SUBJECT} 	%% also used for PDF metadata (hyperref)
+\newcommand{\mytitle}{TITLE}  		%% also used for PDF metadata (hyperref)
+\newcommand{\mysubtitle}{SUBTITLE} 	%% also used for PDF metadata (hyperref)
+\newcommand{\myname}{Max Mustermann}
+\newcommand{\mymail}{Max.Mustermann@example.com}
+\newcommand{\mydate}{\today} 		%% also used for PDF metadata (hyperref)
+
+\newcommand{\mypublisher}{%Publisher
+\normalsize
+\begin{tabular}{ll}
+  1. Pr\"ufer &: Prof. Dr. <Erstpr\"ufer>\\
+  2. Pr\"ufer &: Prof. Dr. <Zweitpr\"ufer>\\
+  & \\
+  Abgabedatum &: 01.\,01.\,2020\\
+\end{tabular}
+} 		%% used for titlepage
+
 \newcommand{\mytitlehead}{%
   \begin{center}
   \begin{minipage}[h]{0.49\linewidth}
@@ -18,23 +35,9 @@
   \end{minipage}
 \end{center}
 }
-\newcommand{\mysubject}{SUBJECT} 	%% also used for PDF metadata (hyperref)
-\newcommand{\mytitle}{TITLE}  		%% also used for PDF metadata (hyperref)
-\newcommand{\mysubtitle}{SUBTITLE} 	%% also used for PDF metadata (hyperref)
-\newcommand{\mydate}{\today} 		%% also used for PDF metadata (hyperref)
-\newcommand{\mypublisher}{%Publisher
-\normalsize
-\begin{tabular}{ll}
-  1. Pr\"ufer &: Prof. Dr. <Erstpr\"ufer>\\
-  2. Pr\"ufer &: Prof. Dr. <Zweitpr\"ufer>\\
-  & \\
-  Abgabedatum &: 01.\,01.\,2020\\
-\end{tabular}
-} 		%% used for titlepage
-\newcommand{\mydedication}{Dedication} 		%% used for titlepage
+
+\newcommand{\mydedication}{} 		%% used for titlepage
 \newcommand{\myextratitle}{} 		%% used for titlepage
-\newcommand{\myname}{Max Mustermann}
-\newcommand{\mymail}{Max.Mustermann@example.com}
 \newcommand{\myauthor}{\myname \\\normalsize\href{mailto:\mymail}{\mymail}}
 \newcommand{\mypdfauthor}{\myname}	%% used for PDF metadata (hyperref)
 \newcommand{\mykeywords}{KEYWORDS} 	%% used for PDF metadata (hyperref)
