@@ -4,6 +4,9 @@
 
 %% --- Predefined PageStyles: --------------------------------------------------
 %% ***************************************************************
+%% * \ihead[plain.scrheadings’s content]{scrheadings’s content}  *
+%% * \chead[plain.scrheadings’s content]{scrheadings’s content}  *
+%% * \ohead[plain.scrheadings’s content]{scrheadings’s content}  *
 %% * \lehead[plain.scrheadings’s content]{scrheadings’s content} *
 %% * \cehead[plain.scrheadings’s content]{scrheadings’s content} *
 %% * \rehead[plain.scrheadings’s content]{scrheadings’s content} *
@@ -13,34 +16,28 @@
 %% ***************************************************************
 %% --- \leftmark \rightmark \headmark \pagemark ---
 
-\ihead []{\headmark}%% inside headings
-\chead []{}%% centered headings
-\ohead []{}%% outside headings
-\ifoot []{}%%inside foot
-\cfoot []{}%% centered foot
-\ofoot [\pagemark]{\pagemark}%% outside foot
-%\lehead []{}%% left aligned even headings
-%\cehead []{}%% centered even headings
-%\rehead []{}%% right aligned even headings
-%\lohead []{}%% left aligned odd headings
-%\cohead []{}%% centered odd headings
-%\rohead []{}%% right aligned odd headings
-%\lefoot []{}%% left aligned even foot
-%\cefoot []{}%% centered even foot
-%\refoot []{}%% right aligned even foot
-%\lofoot []{}%% left aligned odd foot
-%\cofoot []{}%% centered odd foot
-%\rofoot []{}%% right aligned odd foot
-
 \pagestyle {scrheadings} %Stil der Kopf- und Fuzeilen
-
-%\setkomafont{pageheadfoot}{\small}%% example
-%\setkomafont{pagehead}{\bfseries}%%  example
-
-%%=== automark ===
-%% \automark[section level of the right mark]{section level of the left mark}
-%% \automark*[section level of the right mark]{section level of the left mark}
-
 %\automark[section]{chapter}%%      chapter-klasses default
 %\automark[subsection]{section}%%   others default
 
+\makeatletter
+\@ifclassloaded{scrartcl}{%
+  \ihead []{\headmark}%% inside headings
+  \chead []{}%% centered headings
+  \ohead []{}%% outside headings
+  \ifoot []{}%%inside foot
+  \cfoot []{}%% centered foot
+  \ofoot [\pagemark]{\pagemark}%% outside foot
+}{}
+\@ifclassloaded{scrreprt}{%
+  \ihead []{\headmark}%% inside headings
+  \chead []{}%% centered headings
+  \ohead []{}%% outside headings
+  \ifoot []{}%%inside foot
+  \cfoot []{}%% centered foot
+  \ofoot [\pagemark]{\pagemark}%% outside foot
+}{}
+\makeatother
+
+%\setkomafont{pageheadfoot}{\small}%% example
+%\setkomafont{pagehead}{\bfseries}%%  example
