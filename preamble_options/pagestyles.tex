@@ -23,11 +23,8 @@
 \makeatletter
 %\@ifclassloaded{scrartcl}{}{}
 \@ifclassloaded{scrreprt}{%
-  \ihead []{\headmark}%% inside headings
-  \chead []{}%% centered headings
-  \ohead []{}%% outside headings
-  \ifoot []{}%%inside foot
-  \cfoot []{}%% centered foot
+  \clearscrheadfoot %% clear all headings and footers
+  \ihead {\headmark}%% inside headings
   \ofoot [\pagemark]{\pagemark}%% outside foot
 }{}
 %\@ifclassloaded{scrbook}{}{}
